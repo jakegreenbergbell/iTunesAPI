@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iTunes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><center>
+
+    <h1>BAY AREA RAPPERS on iTUNES</h1>
+    Pick what artist to display: <select id="artistName">
+    <option value="">--</option>
+    <option value="e40">e40</option>
+    <option value="g-eazy">G-Eazy</option>
+    <option value="mac+dre">Mac Dre</option>
+    <option value="tupac+shakur">Tupac Shakur</option>
+    <option value="marty+grimes">Marty Grimes</option>
+    <option value="mc+hammer">MC Hammer</option>
+    <option value="mistah+f.a.b.    ">Mistah F.A.B.</option>
+    <option value="nef+the+pharaoh">Nef The Pharaoh</option>
+    <option value="sob+x+rbe">SOB X RBE</option>
+    <option value="rexx+life+raj">Rexx Life Raj</option></select>
+    Pick how many results to display:<input id="resultLimit" type="number" onkeypress="return event.charCode >= 48" min="0" max="50" value="10">
+
+    <p><button class="btn btn-default" onclick="requestAPI()">Show Top Songs</button></p>
+
+    <table id="fillItIn">
+
+    </table>
+
+</body></center>
+</html>
