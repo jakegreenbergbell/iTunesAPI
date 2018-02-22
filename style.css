@@ -11,7 +11,6 @@
 #fillItIn{
     border-style: solid;
     border-collapse: collapse;
-    border-radius: 6px;
 }
 
 #resultLimit{
@@ -21,4 +20,35 @@
     border-style: solid;
     border-color: rgb(166, 166, 166);
     border-image: initial;
+}
+
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+td, th {
+    border:solid black 1px;
+}
+
+th {
+    border-top: none;
+    padding:10px;
+}
+
+tr:hover{
+    background-color: black;
+    color:white;
+    transition: 200ms;
+    padding:30px;
+}
+
+th:hover{
+    background-color:white;
+    color:black;
+    transition: 400ms;
 }

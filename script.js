@@ -26,12 +26,22 @@ function execute(result){
     for(var i = 0; i < limit; i++){
         var imageURL = result["results"][i]["artworkUrl100"];
         var trackName = result["results"][i]["trackName"];
+        var song = result["results"][i]["previewUrl"];
 
-        $("#fillItIn").append('<tr> ' +
+        $("#fillItIn").append('<tr class="tr"> ' +
             '<th>' + (i + 1) + '</th>' +
-            '<th><img src=' + imageURL + '></th> ' +
+            '<th><img  onclick="playSong(' + song + ')" src=' + imageURL + '></th> ' +
+            '<th><audio controls src="' + song + '" type="audio/m4a"></audio></th>' +
             '<th>' + trackName + '</th>' +
             '</tr>');
     }
 
 }
+
+$(document).ready(function(){
+    $(".th").on("mouseenter", function(){
+        $(this).animate({"background-color": "red"}, "400ms");
+        console.log(this);
+    })
+
+});
